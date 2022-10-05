@@ -28,10 +28,6 @@ i {
     padding-right: 10px;
 }
 
-#mainSite {
-    /* display: none; */
-}
-
 #filters {
     display: flex;
     justify-content: space-between;
@@ -128,6 +124,7 @@ i {
 #hoodies1 {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 #hoodies1 li:nth-child(2) {
@@ -159,6 +156,7 @@ i {
 #hoodies2 {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 #hoodies2 li:nth-child(2) {
@@ -190,6 +188,7 @@ i {
 #hoodies3 {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 #hoodies3 li:nth-child(2) {
@@ -221,6 +220,7 @@ i {
 #hoodies4 {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 #hoodies4 li:nth-child(2) {
