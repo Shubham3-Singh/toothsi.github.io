@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Toothsi Project</title>
+    <script>
+        function incrementValue1() {
+            var value = parseInt(document.getElementById('qty1').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('qty1').value = value;
+        }
+        function incrementValue2() {
+            var value = parseInt(document.getElementById('qty2').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('qty2').value = value;
+        }
+        function incrementValue3() {
+            var value = parseInt(document.getElementById('qty3').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('qty3').value = value;
+        }
+        function incrementValue4() {
+            var value = parseInt(document.getElementById('qty4').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('qty4').value = value;
+        }
+        function goToSummary() {
+            document.getElementById("summarybox").style.display = "block";
+            document.getElementById("summarybox").style.fadeIn = "slow";
+            document.getElementById("mainSite").style.opacity = "0.2";
+            document.getElementById("close").style.display = "block";
+        }
+        function hide() {
+            document.getElementById("summarybox").style.display = "none";
+            document.getElementById("close").style.display = "none";
+            document.getElementById("mainSite").style.opacity = "1";
+        }
+        function handleClick(cb) {
+            var firstDivContent = document.getElementById('hoodies1');
+            var secondDivContent = document.getElementById('summaryLeft');
+            secondDivContent.innerHTML = firstDivContent.innerHTML;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="mainSite">
+        <div id="filters">
+            <ul class="left">
+                <li>
+                    <select name="category" id="category">
+                        <option value="hoodies">- Hoodies</option>
+                        <option value="shirts">- Shirts</option>
+                        <option value="shorts">- Shorts</option>
+                    </select>
+                </li>
+                <li class="sizes">
+                    <select name="sizes" id="size">
+                        <option value="size">Size</option>
+                        <option value="medium">M</option>
+                        <option value="large">L</option>
+                        <option value="extraLarge">XL</option>
+                    </select>
+                </li>
+                <li>
+                    <a href="" id="reset"><i class="fa-solid fa-rotate-left"></i>Reset</a>
+                </li>
+            </ul>
+            <ul class="right">
+                <li class="search">
+                    <h3>Search:<input type="text" id="srch"></h3>
+                </li>
+                <li>
+                    <button onclick="goToSummary()" id="addToCart">Add To Cart</button>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar">
+            <div class="one">
+                <h5>Image</h5>
+                <h5>Name</h5>
+            </div>
+            <div class="two">
+                <select name="color" id="color">
+                    <option value="Blue">Blue</option>
+                    <option value="Pink">Pink</option>
+                    <option value="Black">Black</option>
+                </select>
+                <select name="stock" id="stock">
+                    <option value="inStock">In stock</option>
+                    <option value="outStock"><i class="fa-solid fa-face-frown-slight"></i>Out of stock</option>
+                </select>
+                <select name="price" id="price">
+                    <option value="35">$35.00</option>
+                    <option value="40">$40.00</option>
+                    <option value="50">$50.00</option>
+                </select>
+            </div>
+            <div class="three">
+                <h5>Buy</h5>
+            </div>
+        </div>
+        <div id="mainArea">
+            <ul id="hoodies1">
+                <li>
+                    <img src="./images/hoodie1.jpg" width="210px" alt="">
+                </li>
+                <li>
+                    <h5>Woo Ninja</h5>
+                </li>
+                <li>
+                    <h5>Pink</h5>
+                </li>
+                <li class="stck">
+                    <i class="fa-solid fa-face-smile"></i>
+                    <h5>In stock</h5>
+                </li>
+                <li>
+                    <h5>$35.00</h5>
+                </li>
+                <li>
+                    <input type="text" name="qty" class="qty" id="qty1" value="1" />
+                    <button class="add" onclick="incrementValue1()"><i
+                            class="fa-solid fa-cart-shopping cart"></i></button>
+                    <input type="checkbox" class="chkbox" onclick='handleClick(this);'>
+                </li>
+            </ul>
+            <ul id="hoodies2">
+                <li>
+                    <img src="./images/hoodie2.jpg" width="210px" alt="">
+                </li>
+                <li>
+                    <h5>Woo Logo</h5>
+                </li>
+                <li>
+                    <h5>Pink</h5>
+                </li>
+                <li class="stck">
+                    <i class="fa-solid fa-face-smile"></i>
+                    <h5>In stock</h5>
+                </li>
+                <li>
+                    <h5>$35.00</h5>
+                </li>
+                <li>
+                    <input type="text" name="qty" class="qty" id="qty2" maxlength="12" value="1" />
+                    <button class="add" onclick="incrementValue2()"><i
+                            class="fa-solid fa-cart-shopping cart"></i></button>
+                    <input type="checkbox" class="chkbox">
+                </li>
+            </ul>
+            <ul id="hoodies3">
+                <li>
+                    <img src="./images/hoodie3.jpg" width="210px" alt="">
+                </li>
+                <li>
+                    <h5>Patient Ninja</h5>
+                </li>
+                <li>
+                    <h5>Pink</h5>
+                </li>
+                <li class="stck">
+                    <i class="fa-solid fa-face-smile"></i>
+                    <h5>In stock</h5>
+                </li>
+                <li>
+                    <h5>$35.00</h5>
+                </li>
+                <li>
+                    <input type="text" name="qty" class="qty" id="qty3" maxlength="12" value="1"
+                        class="input-text qty" />
+                    <button class="add" onclick="incrementValue3()"><i
+                            class="fa-solid fa-cart-shopping cart"></i></button>
+                    <input type="checkbox" class="chkbox">
+                </li>
+            </ul>
+            <ul id="hoodies4">
+                <li>
+                    <img src="./images/hoodie4.jpg" width="210px" alt="">
+                </li>
+                <li>
+                    <h5>Ninja Silhouette</h5>
+                </li>
+                <li>
+                    <h5>Pink</h5>
+                </li>
+                <li class="stck">
+                    <i class="fa-solid fa-face-smile"></i>
+                    <h5>In stock</h5>
+                </li>
+                <li>
+                    <h5>$35.00</h5>
+                </li>
+                <li>
+                    <input type="text" name="qty" class="qty" id="qty4" maxlength="12" value="1"
+                        class="input-text qty" />
+                    <button class="add" onclick="incrementValue4()"><i
+                            class="fa-solid fa-cart-shopping cart"></i></button>
+                    <input type="checkbox" class="chkbox">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="summarybox">
+        <i class="fa-solid fa-xmark" id="close" onclick="hide()"></i>
+        <div id="summaryMain">
+            <div id="summaryLeft"></div>
+            <div id="summaryRight">
+                <h2>Cart totals</h2>
+                <ul id="cart1">
+                    <li>
+                        <h6>Subtotal</h6>
+                    </li>
+                    <li>
+                        <h6 class="blue">$35.00</h6>
+                    </li>
+                </ul>
+                <hr>
+                <ul id="cart2">
+                    <li>
+                        <h4>Total</h4>
+                    </li>
+                    <li>
+                        <h4 class="blue">$35.00</h4>
+                    </li>
+                </ul>
+                <p id="proceedOut1"><a href="thankyou.html" id="proceedOut2">PROCEED TO CHECKOUT</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

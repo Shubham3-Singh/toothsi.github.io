@@ -1,0 +1,18 @@
+#thankpara {
+    font-size: 46px;
+    text-align: center;
+    background-image: radial-gradient(#eacda3, #d6ae7b);
+    width: 21%;
+    padding: 30px 30px;
+    position: absolute;
+    top: 195px;
+    left: 505px;
+}
+#thank {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    background: -webkit-linear-gradient(#2193b0, #6dd5ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
