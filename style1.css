@@ -3,10 +3,8 @@
     text-align: center;
     background-image: radial-gradient(#eacda3, #d6ae7b);
     width: 21%;
-    padding: 30px 30px;
-    position: absolute;
-    top: 195px;
-    left: 505px;
+    padding: 10px 30px;
+    margin: 0 auto ;
 }
 #thank {
     text-decoration: none;
