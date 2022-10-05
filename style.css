@@ -283,15 +283,17 @@ i {
 
 #summaryMain {
     display: flex;
+    border: 2px solid black;
+    padding: 10px;
 }
 
 #summaryLeft {
-    width: 64%;
-    border: 2px solid red;
+    width: 68%;
     height: auto;
-    margin-right: 5%;
     display: flex;
     list-style-type: none;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 #summaryRight {
@@ -320,7 +322,8 @@ i {
     background-color: blue;
     padding: 20px;
     display: inline-block;
-    padding: 20px 65px;
+    padding: 20px 38px;
+    margin-left: 27px;
 }
 
 #proceedOut2 {
